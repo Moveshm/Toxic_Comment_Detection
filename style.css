@@ -1,0 +1,115 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding-bottom: 20px;
+    background-color: #f5f5f5;
+    color: black;
+}
+
+/* Stylish Header */
+.header {
+    position: fixed;
+    top: 10px;
+    left: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #19C37D;
+    font-family: "Times New Roman", sans-serif;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, color 0.2s;
+}
+
+.header:hover {
+    color: #1EE287;
+    transform: scale(1.1);
+}
+
+/* Chat Output Container (Previous Messages) */
+#chat-output { 
+    background: transparent;
+    margin-bottom: 100px;
+    border-radius: 10px;
+    box-shadow: none;
+    overflow-y: visible; /* Remove separate scroll */
+    max-height: none; /* Ensure it doesn't restrict height */
+    width: 90%;
+    max-width: 450px;
+}
+
+/* Each Message Box */
+.chat-message {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    border-left: 5px solid;
+    background: transparent; /* No separate background */
+}
+
+/* Alternating Message Background Colors */
+.chat-message:nth-child(even),
+.chat-message:nth-child(odd) {
+    background: transparent;
+}
+
+/* Chat Input Container */
+.chat-container {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 50px;
+    padding: 5px;
+    width: 420px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.2s ease-in-out;
+}
+
+#chat-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: black;
+    font-size: 16px;
+    padding: 10px 15px;
+    overflow: hidden;    
+}
+
+/* Send Button */
+#send-btn {
+    background: #19C37D;
+    border: none;
+    padding: 1px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease-in-out;
+    width: 44px;
+    height: 40px;
+}
+
+#send-btn:hover {
+    background: #1EE287;
+    transform: scale(1.1);
+}
+
+#send-btn:active {
+    transform: scale(0.95);
+}
+
+.send-icon {
+    width: 15px;
+    height: 15px;
+    stroke: white;
+}
